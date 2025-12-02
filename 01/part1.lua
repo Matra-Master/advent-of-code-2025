@@ -12,9 +12,9 @@ while true do
   if Line == nil then break end
 
   if Partial == nil then
-    Partial = Dial(50, Line)
+    Partial, _ = Dial(50, Line)
   else
-    Partial = Dial(Partial, Line)
+    Partial, _ = Dial(Partial, Line)
   end
   if Partial == 0 then
     result = result + 1
