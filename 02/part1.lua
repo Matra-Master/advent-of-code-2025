@@ -11,9 +11,13 @@ Line = input:read()
 
 for x, y in string.gmatch(Line, "(%d+)-(%d+)") do
   print("Range from " .. x .. " to " .. y)
-  if !HasPairDigits(x) and !HasPairDigits(y) then
+  -- Drain case where range has two odd numbers
+  if not HasEvenDigits(x) and not HasEvenDigits(y) then
+    print ("Odds: ".. x .. " and " .. y)
     goto continue
   end
+
+
 
   ::continue::
 end
