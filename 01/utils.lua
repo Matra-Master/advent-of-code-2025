@@ -1,7 +1,7 @@
 -- Common functions and variables
 
-local function circularMath(number)
-  return math.fmod(math.fmod(number, 100) + 100, 100)
+local function circularMath(res)
+  return math.fmod(math.fmod(res, 100) + 100, 100)
 end
 
 function Dial(pos, line)
