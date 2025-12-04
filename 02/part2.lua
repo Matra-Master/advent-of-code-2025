@@ -1,6 +1,6 @@
 require 'utils'
 
-local input, err = io.open('input', 'r')
+local input, err = io.open('test_input', 'r')
 if not input then
   print ("Error: Couldn't open input file. Reason: " .. (err or "Unknown Error"))
   return
@@ -31,7 +31,7 @@ for x, y in string.gmatch(Line, "(%d+)-(%d+)") do
   end
 
   while i <= j do
-    if IsValidId1(i) then
+    if IsValidId(i) then
       result = result + i
       print()
       print("|ANSWER| Valid ID " .. i)
